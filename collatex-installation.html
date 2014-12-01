@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Using CollateX</title>
+        <link rel="stylesheet" type="text/css" href="http://www.obdurodon.org/css/style.css" />
+    </head>
+    <body>
+        <h1>Using CollateX</h1>
+        <p>David J. Birnbaum (djbpitt@gmail.com), http://www.obdurodon.org</p>
+        <p>Last revised: 2014-10-04</p>
+        <h2>Installation</h2>
+        <p>To install CollateX, you first need to install Python 2.7 and then CollateX. Here’s how
+            to do that in MacOS and Microsoft Windows. The process described below will probably
+            take between twenty minutes and an hour, depending on how familiar you are with
+            installing programs on your system. The good news is that you only have to do the
+            installation once, and launching CollateX after that will take almost no time.</p>
+        <h3>Installing Python</h3>
+        <h4>Installing Python on MacOS</h4>
+        <p>Installation is run from the <em>command line</em>, also called the <em>terminal</em>.
+            Launch this by opening the Finder, selecting Applications, then Utilities, and then
+            Terminal. A window will open that displays a command line, a place where you can type
+            instructions to be executed on the computer.</p>
+        <p>MacOS should come with Python 2.7 (core language and utilities) installed. You can check
+            this by typing</p>
+        <pre>python --version</pre>
+        <p>at the command line. If what you see begins <q>Python 2.7</q> (there may be a dot and
+            another number after it), all is well. If the Python version number begins with a 3, it
+            won’t work properly with CollateX, and you’ll need to install version 2 of Python, which
+            you can do alongside (that is, without overwriting) version 3. To install Python on
+            MacOS, follow the instructions at <a href="https://www.python.org/download/mac"
+                >https://www.python.org/download/mac</a>.</p>
+        <h4>Installing Python on Microsoft Windows</h4>
+        <p>Install Anaconda Python from <a href="http://docs.continuum.io/anaconda/"
+                >http://docs.continuum.io/anaconda/</a>. Be sure to install version 2.7 (which is
+            the default); CollateX does not work with version 3 of Python. Do not use Python
+            distributions other than Anaconda.</p>
+        <h3>Installing CollateX</h3>
+        <p>Once you have installed Python, you need to install CollateX, along with a few supporting
+            files (<em>libraries</em>). Here is how to do that.</p>
+        <h4>Installing CollateX on MacOS</h4>
+        <p>Open a command line (terminaL) as described above. The easiest way to install CollateX is
+            with pip, a Python <em>package manager</em>. First verify that you have pip installed by
+            typing:</p>
+        <pre>pip --version</pre>
+        <p>If you see something that looks vaguely like <q>pip 1.5.2 from
+                /Library/Python/2.7/site-packages/pip-1.5.2-py2.7.egg (python 2.7)</q>, you have pip
+            installed and can proceed to installing CollateX. If you get an error message that
+            indicates that pip is not installed, install it by typing:</p>
+        <pre>sudo easy_install pip</pre>
+        <p>The system may prompt you to enter your password, which you should do if asked. Then
+            verify that the installation has worked by typing the command above to check the
+            version.</p>
+        <p>Once you have pip installed, you can install CollateX and the programs on which it
+            depends by typing:</p>
+        <pre>sudo pip install --pre collatex
+sudo pip install python-levenshtein</pre>
+        <p>As above, if the system prompts you for your password, provide it.</p>
+        <h4>Installing CollateX on Microsoft Windows</h4>
+        <p>You need to know whether you are running 32-bit Windows (win32) or 64-bit Windows
+            (win-amd64). If you don’t know, you can find out by clicking on the start button, then
+            Control panel, and then System. In the section of the display labeled <q>System</q>, it
+            will specify whether the system is 32-bit (win32) or 64-bit (win-amd64).</p>
+        <p>Open a command line or terminal. You can do that by clicking on the Start button in the
+            lower left of your screen and then typing <q>cmd</q> in the search box labeled <q>Search
+                programs and files</q> (Windows 7) or the general search box (Windows 8). Windows
+            will find the the command-line interface program (displayed as <q>cmd</q> or
+                <q>cmd.exe</q>) and invite you to click to launch it, which you should do. A window
+            will open that displays a command line, a place where you can type instructions to be
+            executed on the computer.</p>
+        <p>Installing CollateX on Windows requires the following step <em>in order</em>: install
+            PyGraphviz, install CollateX, and then install the Python Levenshtein library. Here’s
+            how to do that:</p>
+        <h5>Installing PyGraphviz on Windows</h5>
+        <p>To install PyGraphviz on Windows, first install Graphviz from <a
+                href="http://www.graphviz.org/Download_windows.php"
+                >http://www.graphviz.org/Download_windows.php</a> (choose the current stable release
+            in the msi file format; there is no difference between win32 and win-amd64 for
+            Graphviz). You now need to add the path to the Graphviz dot.exe program to your Windows
+            path, which means first finding where dot.exe has been installed. Your dot.exe program
+            is probably located in C:\Program Files\Graphviz2.38\bin (if you have 32-bit Windows) or
+            C:\Program Files (x86)\Graphviz2.38\bin (for 64-bit Windows), and you check by
+                <strong>ADD PROCEDURE</strong>. Once you know the location, add it to the end of the
+            path variable by following the instructions at <a
+                href="http://www.computerhope.com/issues/ch000549.htm"
+                >http://www.computerhope.com/issues/ch000549.htm</a>. You want to add the path to
+            the Graphviz bin directory at the end of your path; for the 64-bit example above, that
+            means adding the following text at the end of the current path variable value:
+                <q>;C:\Program Files\Graphviz2.38\bin</q> (do not include <q>dot.exe</q> in the
+            path; the path should end with <q>bin</q>).</p>
+        <p>Once you’ve installed Graphviz and added dot.exe to your path, you should download
+            PyGraphviz from <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#pygraphviz"
+                >http://www.lfd.uci.edu/~gohlke/pythonlibs/#pygraphviz</a>, selecting the one that
+            fits your version of Python (probably 2.7) and Windows (win32 or win-amd64). Run the
+            program to install it.</p>
+        <h5>Installing CollateX on Windows</h5>
+        <p>At the command line type:</p>
+        <pre>pip install --pre collatex</pre>
+        <h5>Installing the Python Levenshtein library on Windows</h5>
+        <p>Navigate to <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#python-levenshtein"
+                >http://www.lfd.uci.edu/~gohlke/pythonlibs/#python-levenshtein</a> and download and
+            run the installer that corresponds to your version of Windows and Python. Your version
+            of Python will probably be 2.7; you can check whether you are running win-amd64 or win32
+            as described above.</p>
+        <h2>Environments</h2>
+        <p>Add information about the file system needed to know where project files are located.</p>
+        <h3>iPython</h3>
+        <p>Add instructions for installing and launching iPython and sample from
+            https://pypi.python.org/pypi/collatex.</p>
+        <h3>Command line</h3>
+        <p>Add instructions for running sample from https://pypi.python.org/pypi/collatex.</p>
+        <h2>Special issues</h2>
+        <h3>Unicode</h3>
+        <p>Prepend the following to your file:</p>
+        <pre># This Python file uses the following encoding: utf-8</pre>
+        <p>Decide what to do (for now) about Unicode problems with the current release.</p>
+    </body>
+</html>

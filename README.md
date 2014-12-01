@@ -1,0 +1,4 @@
+collatexInstallation
+====================
+
+CollateX installation documentation

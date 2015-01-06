@@ -31,7 +31,25 @@
             you can do alongside (that is, without overwriting) version 3. To install Python on
             MacOS, follow the instructions at <a href="https://www.python.org/download/mac"
                 >https://www.python.org/download/mac</a>.</p>
-        <h4>Installing Python on Microsoft Windows</h4>
+       <!-- <p>Debian and Ubuntu last releases have both Python 2.7 and Python 3 pre-installed, but
+            typing</p>
+        <pre>python -\-version</pre>
+        <p>at the command line will likely give you back the version <q>2.7</q>. Type</p>
+        <pre>python3 -\-version</pre>
+        <p>instead (and use the path <code>/usr/bin/python3</code> to point to the latest supported
+            Python 3 version). If you need to install Python 3, you can easily do so by using the <a
+                href="https://apps.ubuntu.com/cat/applications/synaptic">Synaptic Package
+                Manager</a>. Search for <q>python3</q> and do not desinstall <q>python 2.7</q>! or
+            type:</p>
+        <pre>sudo apt-get install python3</pre>
+        <p>Alternatively, the <a href="https://launchpad.net/ubuntu/+ppas">PPA</a>
+            <a href="https://launchpad.net/~fkrull/+archive/ubuntu/deadsnakes">deadsnakes</a>,
+            maintained by Felix Krull, contains old and new Python versions.</p>
+        <pre>sudo apt-get install python-software-properties
+sudo add-apt-repository ppa:fkrull/deadsnakes
+sudo apt-get update
+sudo apt-get install python3.3</pre>
+-->        <h4>Installing Python on Microsoft Windows</h4>
         <p>Install Anaconda Python from <a href="http://docs.continuum.io/anaconda/"
                 >http://docs.continuum.io/anaconda/</a>. Be sure to install version 2.7 (which is
             the default); CollateX does not work with version 3 of Python. Do not use Python
@@ -49,8 +67,8 @@
             installed and can proceed to installing CollateX. If you get an error message that
             indicates that pip is not installed, install it by typing:</p>
         <pre>sudo easy_install pip</pre>
-        <p>In Linux/UNIX:</p>
-        <pre>sudo apt-get install python-pip</pre>
+       <!-- <p>In Linux/UNIX:</p>
+        <pre>sudo apt-get install python-pip</pre>-->
         <p>The system may prompt you to enter your password, which you should do if asked. Then
             verify that the installation has worked by typing the command above to check the
             version.</p>
@@ -58,8 +76,8 @@
             depends by typing:</p>
         <pre>sudo pip install --pre collatex
 sudo pip install python-levenshtein</pre>
-        <p>In Linux/UNIX:</p>
-        <pre>sudo pip install collatex</pre>
+       <!-- <p>In Linux/UNIX:</p>
+        <pre>sudo pip install collatex</pre>-->
         <p>As above, if the system prompts you for your password, provide it.</p>
         <h4>Installing CollateX on Microsoft Windows</h4>
         <p>You need to know whether you are running 32-bit Windows (win32) or 64-bit Windows

@@ -103,7 +103,8 @@ above to check the version.
 Once you have pip installed, you can install CollateX and the programs on
 which it depends by typing:
 
-    sudo pip3 install --pre collatex sudo pip3 install python-levenshtein
+    sudo pip3 install --pre collatex 
+    sudo pip3 install python-levenshtein
 
 As above, if the system prompts you for your password, provide it.
 
@@ -126,37 +127,12 @@ start button, then Control panel, and then System. In the section of the
 display labeled “System”, it will specify whether the system is 32-bit
 (win32) or 64-bit (win-amd64).
 
-Installing CollateX on Windows requires the following step *in order*:
+Installing CollateX on Windows requires the following steps:
 
-* install PyGraphviz, 
-* install CollateX, and then 
+* install CollateX 
 * install the Python Levenshtein library. 
 
 Here’s how to do that:
-
-##### Installing PyGraphviz on Windows
-
-To install PyGraphviz on Windows, first install Graphviz from
-<http://www.graphviz.org/Download_windows.php> (choose the current stable
-release in the msi file format; there is no difference between win32 and
-win-amd64 for Graphviz). You now need to add the path to the Graphviz
-dot.exe program to your Windows path, which means first finding where
-dot.exe has been installed. Your dot.exe program is probably located in
-C:\\Program Files\\Graphviz2.38\\bin (if you have 32-bit Windows) or
-C:\\Program Files (x86)\\Graphviz2.38\\bin (for 64-bit Windows), and you
-check by **TODO ADD PROCEDURE**. Once you know the location, add it to the
-end of the path variable by following the instructions at 
-<http://www.computerhope.com/issues/ch000549.htm>. You want to add the path
-to the Graphviz bin directory at the end of your path; for the 64-bit
-example above, that means adding the following text at the end of the
-current path variable value: “;C:\\Program Files\\Graphviz2.38\\bin” (do
-not include “dot.exe” in the path; the path should end with “bin”).
-
-Once you’ve installed Graphviz and added dot.exe to your path, you should
-download PyGraphviz from
-<http://www.lfd.uci.edu/~gohlke/pythonlibs/#pygraphviz>, selecting the one
-that fits your version of Python (probably 2.7) and Windows (win32 or
-win-amd64). Run the program to install it.
 
 ##### Installing CollateX on Windows
 

@@ -1,12 +1,12 @@
 Using CollateX
 ==============
 
-David J. Birnbaum (djbpitt@gmail.com), http://www.obdurodon.org
+David J. Birnbaum (<djbpitt@gmail.com>), <http://www.obdurodon.org>  
+Tara Andrews (<tla@mit.edu>), <http://www.dh.unibe.ch/en/andrews/>
 
-Last revised: 2014-10-04
+Last revised: 2015-05-16
 
-Installation
-------------
+# Installation
 
 To install CollateX, you first need to install Python 3 and then CollateX.
 Here’s how to do that in Mac OS X, Ubuntu Linux, and Microsoft Windows. The
@@ -19,26 +19,13 @@ and launching CollateX after that will take almost no time.
 
 #### Installing Python on Mac OS X
 
-Installation is run from the *command line*, also called the *terminal*.
-Launch this by opening the Finder, selecting Applications, then Utilities,
-and then Terminal. A window will open that displays a command line, a place
-where you can type instructions to be executed on the computer.
-
-At the time of writing, Mac OS X normally comes with Python 2.7 (core
-language and utilities) installed. You can check this by typing
-
-    python --version
-
-at the command line. If what you see begins “Python 2.7” (there may be a
-dot and another number after it), then you will need to install Python 3 as
-well. This will not affect your existing Python or anything that uses it.
-
-To install Python 3 on MacOS, select the 'Latest Python 3 Release' link at
-<https://www.python.org/download/mac>.
+Install Anaconda Python from <http://continuum.io/downloads.html>. Be sure
+to click on the link that says "I want Python 3.4" before you download. Do
+not use Python distributions other than Anaconda.
 
 #### Installing Python on Ubuntu Linux
 
-Debian and Ubuntu last releases have both Python 2.7 and Python 3
+The most recent Debian and Ubuntu releases have both Python 2.7 and Python 3
 pre-installed, but typing
 
     python --version
@@ -52,6 +39,8 @@ supported Python 3 version). If you need to install Python 3, you can do so
 by typing:
 
     sudo apt-get install python3
+
+If your system prompts you for your password, provide it.
 
 Alternatively, you can install Python 3 by using the [Synaptic Package
 Manager](https://apps.ubuntu.com/cat/applications/synaptic). Search for
@@ -83,30 +72,14 @@ few supporting files (*libraries*). Here is how to do that.
 #### Installing CollateX on MacOS
 
 Open a command line (terminal) as described above. The easiest way to
-install CollateX is with pip, a Python *package manager*. First verify that
-you have pip installed by typing:
+install CollateX is with pip, a Python *package manager*. pip comes bundled
+with Anaconda, so you don’t have to install it separately, and you can install
+CollateX and the programs on which it depends by typing:
 
-    pip --version
+    sudo pip install --pre collatex 
+    sudo pip install python-levenshtein
 
-If you see something that looks vaguely like “pip 6.0.8 from
-/Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-
-packages (python 3.4)”, you have pip installed and can proceed to
-installing CollateX. If you get an error message that indicates that pip is
-not installed, install it by typing:
-
-    TODO fill this in
-
-The system may prompt you to enter your password, which you should do if
-asked. Then check that the installation has worked by typing the command
-above to check the version.
-
-Once you have pip installed, you can install CollateX and the programs on
-which it depends by typing:
-
-    sudo pip3 install --pre collatex 
-    sudo pip3 install python-levenshtein
-
-As above, if the system prompts you for your password, provide it.
+If the system prompts you for your password, provide it.
 
 #### Installing CollateX on Ubuntu Linux
 
@@ -122,10 +95,11 @@ If you get an error message, try:
 #### Installing CollateX on Microsoft Windows
 
 You need to know whether you are running 32-bit Windows (win32) or 64-bit
-Windows (win-amd64). If you don’t know, you can find out by clicking on the
-start button, then Control panel, and then System. In the section of the
-display labeled “System”, it will specify whether the system is 32-bit
-(win32) or 64-bit (win-amd64).
+Windows (win-amd64) in order to install the Python Levenshtein library, which
+is required by CollateX. If you don’t know which version of Windows you are
+running, you can find out by clicking on the start button, then Control panel,
+and then System. In the section of the display labeled “System”, it will
+specify whether the system is 32-bit (win32) or 64-bit (win-amd64).
 
 Installing CollateX on Windows requires the following steps:
 

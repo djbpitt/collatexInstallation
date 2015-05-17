@@ -4,4 +4,8 @@ collatexInstallation
 CollateX installation documentation
 
 To do:
-Update for Python 3
+
+* Expand Linux instructions
+* graphviz instructions
+* IDE / editor 
+

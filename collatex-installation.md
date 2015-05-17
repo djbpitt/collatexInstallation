@@ -4,24 +4,41 @@ Using CollateX
 David J. Birnbaum (<djbpitt@gmail.com>), <http://www.obdurodon.org>  
 Tara Andrews (<tla@mit.edu>), <http://www.dh.unibe.ch/en/andrews/>
 
-Last revised: 2015-05-16
+Last revised: 2015-05-17
 
-# Installation
+## Overview
 
-To install CollateX, you first need to install Python 3 and then CollateX.
+This tutorial explains how to install Python, CollateX, and IPython notebook
+for use in our CollateX workshop at DH2015 (Sydney). Workshop participants should
+install the software prior to the workshop.
+
+## Installation
+
+To install CollateX, you need first to install Python 3 and then CollateX, along
+with some other programs, packages, and modules used by CollateX.
 Here’s how to do that in Mac OS X, Ubuntu Linux, and Microsoft Windows. The
-process described below will probably take between twenty minutes and an
+process described below will probably take between thirty minutes and an
 hour, depending on how familiar you are with installing programs on your
 system. The good news is that you only have to do the installation once,
-and launching CollateX after that will take almost no time.
+and launching CollateX after that will take almost no time. This tutorial
+assumes that you are running the latest version of Mac OS (10.10 Yosemite),
+Windows **[add versions]**, or Ubuntu Linux **[add versions]**. 
 
 ### Installing Python
 
-#### Installing Python on Mac OS X
+Your system may already have some version of Python installed, but for
+the workshop you’ll need to install the specific versions described below.
+CollateX will work with other versions of Python 3 than the ones listed below,
+but the installation and configuration is more complicated, so for the workshop
+we are requiring these specific versions. Installing them according to the
+instructions will not interfere with existing Python versions on your system.
+
+#### Installing Python on MacOS
 
 Install Anaconda Python from <http://continuum.io/downloads.html>. Be sure
 to click on the link that says "I want Python 3.4" before you download. Do
-not use Python distributions other than Anaconda.
+not use Python distributions other than Anaconda. If you are curious, there’s
+a useful Anaconda quick-start tutorial at <https://store.continuum.io/static/img/Anaconda-Quickstart.pdf>.
 
 #### Installing Python on Ubuntu Linux
 
@@ -62,7 +79,8 @@ access it with:
 
 Install Anaconda Python from <http://continuum.io/downloads.html>. Be sure
 to click on the link that says "I want Python 3.4" before you download. Do
-not use Python distributions other than Anaconda.
+not use Python distributions other than Anaconda.  If you are curious, there’s a
+useful Anaconda quick-start tutorial at <https://store.continuum.io/static/img/Anaconda-Quickstart.pdf>.
 
 ### Installing CollateX
 
@@ -83,19 +101,38 @@ If the system prompts you for your password, provide it.
 
 #### Installing CollateX on Ubuntu Linux
 
-Type:
+The easiest way to install CollateX is with pip, a Python *package manager*. To
+test whether pip is available, type:
+
+    pip --version
+    
+**[Should the following be "pip" or "pip3"? Should we say that all regular
+Python commands (python, pip, easy_install) should be followed by "3" when using Ubuntu Linux? For Python 3 on Ubuntu, do we install it as just "pip" but run it
+as "pip3"?]**
+
+If you get an error message, you need to install pip, which you can do by
+typing:
 
     sudo easy_install3 pip
 
-If you get an error message, try:
+If the system prompts you for your password after this (or any other) "sudo"
+command, provide it. If you still get an error message, you need to install
+easy_install3 in order to install pip in order to install other programs (sigh).
+Try:
 
     sudo apt-get install python3-setuptools
     sudo easy_install3 pip
 
+Once you have pip installed, type:
+
+    sudo pip install --pre collatex 
+    sudo pip install python-levenshtein
+
 #### Installing CollateX on Microsoft Windows
 
-You need to know whether you are running 32-bit Windows (win32) or 64-bit
-Windows (win-amd64) in order to install the Python Levenshtein library, which
+The installation of CollateX itself is the same for all versions of Microsoft
+Windows, but you need to know whether you are running 32-bit Windows (win32) or 
+64-bit Windows (win-amd64) in order to install the Python Levenshtein library, which
 is required by CollateX. If you don’t know which version of Windows you are
 running, you can find out by clicking on the start button, then Control panel,
 and then System. In the section of the display labeled “System”, it will
@@ -108,7 +145,7 @@ Installing CollateX on Windows requires the following steps:
 
 Here’s how to do that:
 
-##### Installing CollateX on Windows
+##### Installing CollateX on Microsoft Windows
 
 Open a command shell. You can do that by clicking on the Start button in
 the lower left of your screen and then typing “powershell” in the search
@@ -122,37 +159,86 @@ At the command line type:
 
     pip install --pre collatex
 
-##### Installing the Python Levenshtein library on Windows
+##### Installing the Python Levenshtein library on Microsoft Windows
 
 Navigate to <http://www.lfd.uci.edu/~gohlke/pythonlibs/#python-levenshtein>
 and download and run the installer that corresponds to your version of
 Windows and Python. Your version of Python will probably be 3.4; you can
 check whether you are running win-amd64 or win32 as described above.
 
-Environments
-------------
+### Installing graphviz
 
-Add information about the file system needed to know where project files
-are located.
+graphviz is a program for creating graphic representations, including the
+*variant graphs* sometimes used in CollateX (see the examples at
+<http://stemmaweb.net/stemmaweb/relation/help/Latin>). graphviz is required by 
+CollateX only for viewing variant graphs. We recommend installing it for the 
+workshop, but you can perform collations without it.
 
-### iPython
+#### Installing graphviz on MacOS
 
-Add instructions for installing and launching iPython and sample from
-https://pypi.python.org/pypi/collatex.
+The easiest way to install graphviz on MacOS is with ... **[resume here]**
+
+You also need to install Python support for graphviz, which you can do with:
+
+    sudo pip install graphviz
+
+#### Installing graphviz on Ubuntu Linux
+
+**[Add instructions for installing graphviz on Ubuntu Linux]**
+
+#### Installing graphvix on Microsoft Windows
+
+**[Add instructions for installing graphviz on Microsoft Windows]**
+
+## Environments
+
+**[Add information about the file system needed to know where project files
+are located.]**
+
+### IPython notebook
+
+We will use the IPython notebook development environment in our workshop to
+write and test CollateX collations. You should install IPython notebook in advance,
+and we’ll describe how to use it to work with CollateX at the workshop.
+
+#### Starting IPython notebook on MacOS and Microsoft Windows
+
+IPython notebook is bundled with Anaconda Python, so no separate installation
+is required. To launch IPython notebook in MacOS, open the Finder and navigate
+to the *anaconda* folder under your main user folder and double-click on 
+Launcher.app. (If your main user folder isn’t visible in the Finder, you can get
+there by typing Shift-Command-H in an open Finder window.) In Microsoft Windows you
+can start the Launcher from your regular Start menu. You can then start IPython
+notebook from the Launcher. 
+
+#### Installing and starting IPython notebook on Ubuntu Linux
+
+**[Add instructions for installing and launching IPython notebook on Linux.]**
+
+#### Using IPython notebook
+
+We’ll describe how to use IPython notebook in the workshop, but if you already know 
+a bit of Python, you can type Python commands into an empty cell and click the Run
+button (right-pointing triangle in the menu bar) or type Shift-Enter. The results of
+running your program will appear immediately below your code. For example, type the
+following into a cell in IPython notebook:
+
+    from collatex import *
+    collation = Collation()
+    collation.add_plain_witness("A", "The quick brown fox jumps over the dog.")
+    collation.add_plain_witness("B", "The brown fox jumps over the lazy dog.")
+    alignment_table = collate(collation)
+    print(alignment_table)
+
+and click the Run button to show the results.
 
 ### Command line
 
-Add instructions for running sample from
-https://pypi.python.org/pypi/collatex.
+We typically use IPython notebook for development and the command line in 
+production, and we’ll explain how to use CollateX from the command line in the
+workshop. If you are already familiar with working on the command line (sometimes
+called a *terminal* window), you can save your Python code in a file (give it the
+traditional Python filename extension ".py") and run it from the directory in which
+you’ve saved it with `python3 nameofscript.py`.
 
-Special issues
---------------
 
-### Unicode
-
-Prepend the following to your file:
-
-    # This Python file uses the following encoding: utf-8
-
-Decide what to do (for now) about Unicode problems with the current
-release.

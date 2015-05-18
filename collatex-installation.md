@@ -65,7 +65,7 @@ Once you have installed Python, you need to install CollateX, along with a few s
 
 #### Installing CollateX on MacOS
 
-Open a command line (terminal) as described above. The easiest way to install CollateX is with pip, a Python *package manager*. pip comes bundled with Anaconda, so you don’t have to install it separately, and you can install CollateX and the programs on which it depends by typing:
+Open a command line (terminal), which is located in the Finder in Applications > Utilities. The easiest way to install CollateX is with pip, a Python *package manager*. pip comes bundled with Anaconda, so you don’t have to install it separately, and you can install CollateX and the libraries on which it depends by typing:
 
     sudo pip install --pre collatex 
     sudo pip install python-levenshtein

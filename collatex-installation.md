@@ -18,13 +18,19 @@ In all of the steps below, if you are prompted to enter your password (which wil
 
 ### Installing Python
 
-Your system may already have some version of Python installed, but for the workshop you’ll need to install the specific versions described below. CollateX will work with other versions of Python 3 than the ones listed below, but the installation and configuration is more complicated, so for the workshop we are requiring these specific versions. Installing them according to the instructions should not interfere with other existing Python versions on your system.
+Your system may already have some version of Python installed, but for the workshop we recommend that you install and use the Anaconda Python distribution. CollateX will work with other distributions of Python 3, but the installation and configuration is more complicated, so for the workshop we are strongly recommending Anaconda. Installing Anaconda according to the instructions on their site should not interfere with other existing Python versions on your system.
+
+For MacOS, Linux, and Windows, the Python installation instructions are the same: install Anaconda Python from <http://continuum.io/downloads.html>. Be sure to click on the link that says <q>I want Python 3.4</q> before you download. Do not use Python distributions other than Anaconda. If you are curious, there’s a useful Anaconda quick-start tutorial at <https://store.continuum.io/static/img/Anaconda-Quickstart.pdf>.
+
+<!--
 
 #### Installing Python on MacOS
 
 Install Anaconda Python from <http://continuum.io/downloads.html>. Be sure to click on the link that says <q>I want Python 3.4</q> before you download. Do not use Python distributions other than Anaconda. If you are curious, there’s a useful Anaconda quick-start tutorial at <https://store.continuum.io/static/img/Anaconda-Quickstart.pdf>.
 
 #### Installing Python on Ubuntu Linux
+
+**[Replace all of the following with Anaconda instructions, and consolidate the MacOS, Linux, and Windows instructions into one?]**
 
 The most recent Debian and Ubuntu releases have both Python 2.7 and Python 3 pre-installed, but typing
 
@@ -50,6 +56,8 @@ Alternatively, the [PPA](https://launchpad.net/ubuntu/+ppas) [deadsnakes](https:
 #### Installing Python on Microsoft Windows
 
 Install Anaconda Python from <http://continuum.io/downloads.html>. Be sure to click on the link that says <q>I want Python 3.4</q> before you download. Do not use Python distributions other than Anaconda. If you are curious, there’s a useful Anaconda quick-start tutorial at <https://store.continuum.io/static/img/Anaconda-Quickstart.pdf>.
+
+-->
 
 ### Installing CollateX
 
@@ -111,11 +119,13 @@ graphviz is a program for creating graphic representations, including the *varia
 
 #### Installing graphviz on MacOS
 
-The easiest way to install graphviz on MacOS is with *ports*, and if you already have ports installed, you can type just:
+The easiest way to install graphviz on MacOS is by downloading a dmg file from <http://www.ryandesign.com/graphviz/>. Choose the most recent stable version for your Mac hardware. You probably have an Intel machine, but you can verify by clicking on the little apple in the upper left corner of your screen and selecting <q>About this Mac</q>.
+
+As an alternative to the dmg, you can install graphviz using *ports*. If you already have ports installed, you can type just:
 
     port install graphviz
 
-If you don’t have ports installed, you’ll need to install it, and it requires the installation of Apple’s Xcode and the Xcode Command Line Tools first. Instructions and download links are at <https://www.macports.org/install.php>. 
+If you don’t have ports installed, you’ll need to install it, and it requires the installation of Apple’s Xcode and the Xcode Command Line Tools first. Instructions and download links for these resources are at <https://www.macports.org/install.php>. 
 
 In addition to graphviz itself, you also need to install Python support for graphviz, which you can do with:
 
@@ -124,6 +134,10 @@ In addition to graphviz itself, you also need to install Python support for grap
 #### Installing graphviz on Ubuntu Linux
 
 **[Add instructions for installing graphviz on Ubuntu Linux]**
+
+In addition to graphviz itself, you also need to install Python support for graphviz, which you can do with:
+
+    sudo pip install graphviz
 
 #### Installing graphvix on Microsoft Windows
 
@@ -137,6 +151,8 @@ are located.]**
 ### IPython notebook
 
 We will use the IPython notebook development environment in our workshop to write and test CollateX collations. You should install IPython notebook in advance, and at the workshop we’ll describe how to use it to work with CollateX.
+
+<!-- If IPython notebook works okay out of Ubuntu with the Anaconda launcher, we can cut the line above about installing IPython and unify the instructions for launching it to include Linux with the other two operating systems. -->
 
 #### Starting IPython notebook on MacOS and Microsoft Windows
 

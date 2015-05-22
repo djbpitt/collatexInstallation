@@ -4,7 +4,7 @@ Using CollateX
 David J. Birnbaum (<djbpitt@gmail.com>), <http://www.obdurodon.org>  
 Tara Andrews (<tla@mit.edu>), <http://byzantini.st/>
 
-Last revised: 2015-05-17
+Last revised: 2015-05-21
 
 ## Overview
 
@@ -38,7 +38,7 @@ For MacOS, Linux, and Windows, the Python installation instructions are the same
 
 #### Extra instructions for Linux users
 
-The Anaconda package installer on Linux is not a clickable installation program as on Mac and Windows. You will need to choose to save the file, and then make a note of where the installer was saved (most likely your Downloads folder). You will then open a command line window (ctrl-alt-T on Ubuntu - also see below) to type the command
+The Anaconda package installer on Linux is not a clickable installation program as on Mac and Windows. You will need to choose to save the file, and then make a note of where the installer was saved (most likely your Downloads folder). You will then open a command line window (Ctrl-Alt-T on Ubuntu) to type the command
 
 	bash Downloads/Anaconda3-2.2.0-Linux-x86_64.sh
 	
@@ -48,7 +48,7 @@ When asked, say 'yes' to everything. When the installation is finished, type
 
 	exit
 	
-to close the command line window. (You need to do this, even though you will open a new one below!)
+to close the command line window. (You need to do this, even though you will open a new one shortly!)
 
 <!--
 
@@ -109,7 +109,7 @@ or this:
 
 Now you are ready to type the commands that come next.
 
-***N.B. for Windows users**:  Some of you may have used `cmd.exe` in the past, to work at the command line. We recommend Powershell because it uses many of the same commands that have always been in use on Unix-like systems, and so makes it easier for you to follow generic command-line instructions such as those we will be giving in the workshop. If you stick to cmd.exe you do so at your own risk.*
+<em>**N.B. for Windows users**: Some of you may have used `cmd.exe` in the past, to work at the command line. We recommend Powershell because it uses many of the same commands that have always been in use on Unix-like systems, and so makes it easier for you to follow generic command-line instructions such as those we will be giving in the workshop. If you stick to `cmd.exe` you do so at your own risk.</em>
 
 ### Installing CollateX
 
@@ -124,7 +124,7 @@ CollateX relies on this library to do inexact matching of words. The installatio
 
     pip install python-levenshtein
     
-***N.B. for Mac users:** You may get a popup window telling you that you require the command-line developer tools. If you get this window, choose 'Install'. When the installation is finished, run the command again.*
+<em>**N.B. for Mac users:** You may get a popup window telling you that you require the command-line developer tools. If you get this window, choose 'Install'. When the installation is finished, run the command again.</em>
     
 <!--
 
@@ -179,7 +179,7 @@ Graphviz is a program for creating graphic representations, including the *varia
 
 #### Installing Graphviz on Windows
 
-The easiest way to install Graphviz is to download the appropriate installer from [the Graphviz download page](http://www.graphviz.org/Download.php) (you will need to accept the license.) On Windows, use the .msi file.
+The easiest way to install Graphviz is to download the appropriate installer from [the Graphviz download page](http://www.graphviz.org/Download.php) (you will need to accept the license.) On Windows, use the .msi file if you can.
 
 Next, you will need to add Graphviz to the execution path.
 
@@ -264,5 +264,4 @@ and click the Run button to show the results.
 We typically use IPython notebook for experimentation and the command line for finished Python programs, and we’ll explain how to use CollateX from the command line in the workshop. If you are already familiar with working on the command line, you can save your Python code in a file (give it the traditional Python filename extension <q>.py</q>) and run it from the directory in which you’ve saved it with:
 
     python nameofscript.py
-
 

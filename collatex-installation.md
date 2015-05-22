@@ -2,7 +2,7 @@ Using CollateX
 ==============
 
 David J. Birnbaum (<djbpitt@gmail.com>), <http://www.obdurodon.org>  
-Tara Andrews (<tla@mit.edu>), <http://www.dh.unibe.ch/en/andrews/>
+Tara Andrews (<tla@mit.edu>), <http://byzantini.st/>
 
 Last revised: 2015-05-17
 
@@ -35,6 +35,20 @@ In all of the steps below, if you are prompted to enter your password (which wil
 Your system may already have some version of Python installed, but we recommend that you install and use the Anaconda Python distribution. CollateX will work with other distributions of Python 3, but the installation and configuration is more complicated, so for the workshop we are using Anaconda. Installing Anaconda according to the instructions on their site should not interfere with other existing Python versions on your system.
 
 For MacOS, Linux, and Windows, the Python installation instructions are the same: install Anaconda Python from <http://continuum.io/downloads.html>. **Be sure to click on the link that says <q>I want Python 3.4</q> before you download**. If you are curious, there’s a useful Anaconda quick-start tutorial at <https://store.continuum.io/static/img/Anaconda-Quickstart.pdf>.
+
+#### Extra instructions for Linux users
+
+The Anaconda package installer on Linux is not a clickable installation program as on Mac and Windows. You will need to choose to save the file, and then make a note of where the installer was saved (most likely your Downloads folder). You will then open a command line window (ctrl-alt-T on Ubuntu - also see below) to type the command
+
+	bash Downloads/Anaconda3-2.2.0-Linux-x86_64.sh
+	
+(where `Downloads` is replaced with the name of the folder in which you saved Anaconda, if it is different.)
+
+When asked, say 'yes' to everything. When the installation is finished, type
+
+	exit
+	
+to close the command line window. (You need to do this, even though you will open a new one below!)
 
 <!--
 
@@ -79,13 +93,9 @@ Once you have installed Python, you need to install CollateX, along with a few s
 
 * For Mac OS X: the Terminal.app that you will find in the Applications -> Utilities folder.
 * For Windows: Windows Powershell, which you can find from the search box.
-* For Linux: ??? where is this on Ubuntu Desktop ???
+* For Ubuntu Desktop (Unity): you can type Ctrl-Alt-T or you can type 'Terminal' into the Search box.
 
 A window will open that displays a command line, a place where you can type instructions to be executed on the computer, with a prompt that might look something like this:
-
-	tla@minuscule:~$ 
-	
-or this:
 
 	Taras-Mac:~ tara$ 
 	
@@ -93,9 +103,13 @@ or this:
 
 	PS C:\Users\Tara L Andrews> 
 	
+or this:
+
+	tla@ubuntu:~$ 
+
 Now you are ready to type the commands that come next.
 
-*N.B. for Windows users:  Some of you may have used `cmd.exe` in the past, to work at the command line. We recommend Powershell because it uses many of the same commands that have always been in use on Unix-like systems, and so makes it easier for you to follow generic command-line instructions such as those we will be giving in the workshop. If you stick to cmd.exe you do so at your own risk.*
+***N.B. for Windows users**:  Some of you may have used `cmd.exe` in the past, to work at the command line. We recommend Powershell because it uses many of the same commands that have always been in use on Unix-like systems, and so makes it easier for you to follow generic command-line instructions such as those we will be giving in the workshop. If you stick to cmd.exe you do so at your own risk.*
 
 ### Installing CollateX
 
@@ -110,7 +124,7 @@ CollateX relies on this library to do inexact matching of words. The installatio
 
     pip install python-levenshtein
     
-**N.B. for Mac users:** You may get a popup window telling you that you require the command-line developer tools. If you get this window, choose 'Install'. When the installation is finished, run the command again.
+***N.B. for Mac users:** You may get a popup window telling you that you require the command-line developer tools. If you get this window, choose 'Install'. When the installation is finished, run the command again.*
     
 <!--
 
@@ -193,13 +207,13 @@ If you don’t have ports installed, you’ll need to install it, and it require
 
 #### Installing Graphviz on Ubuntu Linux
 
-Graphviz can be installed on Ubuntu with the command:
+Graphviz can be installed from the Terminal on Ubuntu with the command:
 
 	sudo apt-get install graphviz graphviz-dev
 
 ### Installing the Graphviz library for Python
 
-In addition to graphviz itself, you also need to install Python support for graphviz, which you can do with the following.
+In addition to graphviz itself, you also need to install Python support for graphviz, which you can do with the following command typed at the command line.
 
     pip install graphviz
 

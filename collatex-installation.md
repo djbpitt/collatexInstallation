@@ -22,7 +22,7 @@ If you regularly use Python and other software, here are the instructions in a n
 * `pip install graphviz`
 
 
-If not, read on!
+If you are not sure what all that means, read on!
 
 ## Installation
 
@@ -87,18 +87,30 @@ A window will open that displays a command line, a place where you can type inst
 	
 or this:
 
+	Taras-Mac:~ tara$ 
+	
+or this:
+
 	PS C:\Users\Tara L Andrews> 
 	
 Now you are ready to type the commands that come next.
 
-*N.B. for Windows users:  Some of you may have used `cmd.exe` in the past, to work at the command line. We recommend Powershell because it uses many of the same commands that have always been in use on Unix-like systems, and so makes it easier for you to follow generic command-line instructions. If you stick to cmd.exe you do so at your own risk.*
+*N.B. for Windows users:  Some of you may have used `cmd.exe` in the past, to work at the command line. We recommend Powershell because it uses many of the same commands that have always been in use on Unix-like systems, and so makes it easier for you to follow generic command-line instructions such as those we will be giving in the workshop. If you stick to cmd.exe you do so at your own risk.*
 
 ### Installing CollateX
 
 Once you have found your command line, as described above, you are ready to install CollateX. The easiest way to do this is with `pip`, a Python *package manager*. pip comes bundled with Anaconda, so you don’t have to install it separately, and you can install CollateX and the libraries on which it depends by typing:
 
     pip install --pre collatex 
+    
+
+### Installing the Python Levenshtein library
+
+CollateX relies on this library to do inexact matching of words. The installation procedure is the same for all platforms: type the following at the command line.
+
     pip install python-levenshtein
+    
+**N.B. for Mac users:** You may get a popup window telling you that you require the command-line developer tools. If you get this window, choose 'Install'. When the installation is finished, run the command again.
     
 <!--
 
@@ -151,12 +163,25 @@ Navigate to <http://www.lfd.uci.edu/~gohlke/pythonlibs/#python-levenshtein> and 
 
 Graphviz is a program for creating graphic representations, including the *variant graphs* sometimes used in CollateX (see the examples at <http://stemmaweb.net/stemmaweb/relation/help/Latin>). Graphviz is required by CollateX only for viewing variant graphs. We recommend installing it for the workshop, but you can perform collations without it.
 
-#### Installing Graphviz on Windows and Mac OS X
+#### Installing Graphviz on Windows
 
-The easiest way to install Graphviz on Mac or Windows is to download the appropriate installer from [the Graphviz download page](http://www.graphviz.org/Download.php) (you will need to accept the license.) 
+The easiest way to install Graphviz is to download the appropriate installer from [the Graphviz download page](http://www.graphviz.org/Download.php) (you will need to accept the license.) On Windows, use the .msi file.
 
-* On Mac, this will be the 'mountainlion' installer.
-* On Windows, use the .msi file.
+Next, you will need to add Graphviz to the execution path.
+
+#### Installing Graphviz on Mac OS X
+
+The easiest way to install Graphviz is to download the appropriate installer from [the Graphviz download page](http://www.graphviz.org/Download.php) (you will need to accept the license.) On Mac, this will be the 'mountainlion' installer.
+
+If the installer refuses to run when you double-click it, then you can do the following.
+
+* Navigate to the installer in your Downloads folder.
+* Right-click (or ctrl-click) to bring up the context menu.
+* Choose *Open*. 
+* When the warning dialog appears, choose *Open* again.
+
+This is a useful trick to remember for installing any software that you know you want, but that your Mac doesn't trust.
+
 
 <!-- Commenting out the MacPorts instructions, as then you have to set compiler options to tell Anaconda pip where to find the header files.!
 

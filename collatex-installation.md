@@ -79,7 +79,7 @@ Once you have installed Python, you need to install CollateX, along with a few s
 
 * For Mac OS X: the Terminal.app that you will find in the Applications -> Utilities folder.
 * For Windows: Windows Powershell, which you can find from the search box.
-* For Linux: ??? I don't even know where to look if you don't know. ???
+* For Linux: ??? where is this on Ubuntu Desktop ???
 
 A window will open that displays a command line, a place where you can type instructions to be executed on the computer, with a prompt that might look something like this:
 

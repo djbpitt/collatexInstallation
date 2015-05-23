@@ -4,7 +4,7 @@ Using CollateX
 David J. Birnbaum (<djbpitt@gmail.com>), <http://www.obdurodon.org>  
 Tara Andrews (<tla@mit.edu>), <http://byzantini.st/>
 
-Last revised: 2015-05-21
+Last revised: 2015-05-23
 
 ## Overview
 
@@ -141,7 +141,7 @@ At present, Windows users who have no C++ compiler configured (that's probably m
 * `python_Levenshtein‑0.12.0‑cp34‑none‑win32.whl` (if your system is a 32-bit one)
 * `python_Levenshtein‑0.12.0‑cp34‑none‑win_amd64.whl` (if your system is 64-bit)
 
-Make a note of where you have saved them (probably the Downloads folder.) Now return to your Powershell window and type the command:
+Make a note of where you have saved that file (probably the Downloads folder.) Now return to your Powershell window and type the command:
 
 	pip install Downloads\python_Levenshtein‑WHATEVER_YOU_JUST_DOWNLOADED.whl
 	

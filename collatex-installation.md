@@ -213,7 +213,7 @@ When the installer is done, you will need to add Graphviz to the execution path.
 
 1. From the Control Panel, choose System and Security -> System -> Advanced settings, and then click the 'Environment variables' button near the bottom of the window.
 2. Select the entry in the list that says PATH and choose 'Edit'.
-3. Scroll all the way to the end of whatever is already there, and add a `;` character, then the exact install location you copied, and then `\bin`.
+3. Scroll all the way to the end of whatever is already there, and add a `;` character, then the exact folder name you copied, and then `\bin`
 4. Close any open Powershell window you have. Open a new one, and run the command
 
 		where.exe dot

@@ -15,10 +15,10 @@ This tutorial explains how to install Python, CollateX, and IPython notebook for
 If you regularly use Python and other software, here are the instructions in a nutshell:
 
 * Ensure Python 3, preferably the [Anaconda](http://continuum.io/downloads.html) distribution
-* Install Graphviz (either through a package manager such as apt-get or MacPorts, 
-  or go to <http://www.graphviz.org/Download.php> and accept the license)
 * `pip install --pre collatex`
 * `pip install python-levenshtein`
+* Install Graphviz (either through a package manager such as apt-get or MacPorts, 
+  or go to <http://www.graphviz.org/Download.php> and accept the license)
 * `pip install graphviz`
 
 
@@ -26,11 +26,11 @@ If you are not sure what all that means, read on!
 
 ## Installation
 
-To install CollateX, you need first to install Python 3 and then CollateX, along with some other programs, packages, and modules used by CollateX. Here’s how to do that in Mac OS X, Ubuntu Linux, and Microsoft Windows. The process described below will probably take between thirty minutes and an hour, depending on how familiar you are with installing programs on your system. The good news is that you only have to do the installation once, and launching CollateX after that will take almost no time. This tutorial assumes that you are running Mac OS X 10.8 or later, Windows 7 or 8, or Ubuntu Linux 14.04 LTS or later. 
+To run CollateX, you need first to install Python 3 and then the CollateX module, along with some other programs, packages, and modules upon which CollateX depends. Here’s how to do that in Mac OS X, Ubuntu Linux, and Microsoft Windows. The process described below will probably take between thirty minutes and an hour, depending on how familiar you are with installing programs on your system. The good news is that you only have to do the installation once, and launching CollateX after that will take almost no time. This tutorial assumes that you are running Mac OS X 10.8 or later, Windows 7 or 8, or Ubuntu Linux 14.04 LTS or later. 
 
-In all of the steps below, if you are prompted to enter your password (which will happen the first time you use a `sudo` command), you should do so.
+In all of the steps below, if you are prompted to enter your password, you should do so.
 
-### Installing Python
+### 1. Installing Python
 
 Your system may already have some version of Python installed, but we recommend that you install and use the Anaconda Python distribution. CollateX will work with other distributions of Python 3, but the installation and configuration is more complicated, so for the workshop we are using Anaconda. Installing Anaconda according to the instructions on their site should not interfere with other existing Python versions on your system.
 
@@ -87,7 +87,7 @@ Install Anaconda Python from <http://continuum.io/downloads.html>. Be sure to cl
 
 -->
 
-### Opening a command line window
+### 1.5 Opening a command line window
 
 Once you have installed Python, you need to install CollateX, along with a few supporting files (*libraries*). To do this, you will need to work with a command line window. The ones we recommend are:
 
@@ -111,14 +111,14 @@ Now you are ready to type the commands that come next.
 
 <em>**N.B. for Windows users**: Some of you may have used `cmd.exe` in the past, to work at the command line. We recommend Powershell because it uses many of the same commands that have always been in use on Unix-like systems, and so makes it easier for you to follow generic command-line instructions such as those we will be giving in the workshop. If you stick to `cmd.exe` you do so at your own risk.</em>
 
-### Installing CollateX
+### 2. Installing CollateX
 
 Once you have found your command line, as described above, you are ready to install CollateX. The easiest way to do this is with `pip`, a Python *package manager*. pip comes bundled with Anaconda, so you don’t have to install it separately, and you can install CollateX and the libraries on which it depends by typing:
 
     pip install --pre collatex 
     
 
-### Installing the Python Levenshtein library
+### 3. Installing the Python Levenshtein library
 
 CollateX relies on this library to do inexact matching of words.
 
@@ -195,7 +195,7 @@ Navigate to <http://www.lfd.uci.edu/~gohlke/pythonlibs/#python-levenshtein> and 
 
 -->
 
-### Installing Graphviz
+### 4. Installing Graphviz
 
 Graphviz is a program for creating graphic representations, including the *variant graphs* sometimes used in CollateX (see the examples at <http://stemmaweb.net/stemmaweb/relation/help/Latin>). Graphviz is required by CollateX only for viewing variant graphs. We recommend installing it for the workshop, but you can perform collations without it.
 
@@ -249,9 +249,9 @@ If you don’t have ports installed, you’ll need to install it, and it require
 
 Graphviz can be installed from the Terminal on Ubuntu with the command:
 
-	sudo apt-get install graphviz graphviz-dev
+	sudo apt-get install graphviz
 
-### Installing the Graphviz library for Python
+### 5. Installing the Graphviz bindings for Python
 
 In addition to graphviz itself, you also need to install Python support for graphviz, which you can do with the following command typed at the command line.
 
@@ -276,15 +276,18 @@ IPython notebook is bundled with Anaconda Python, so no separate installation is
 
 	ipython notebook
 	
-and wait for a window to open in your Web browser.
+and wait for a window to open in your Web browser. 
+
+If, for whatever reason, nothing happens in your Web browser, then once you see a pair of lines like this:
+
+	[I 23:14:13.260 NotebookApp] The IPython Notebook is running at: http://localhost:8888/
+	[I 23:14:13.260 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+	
+then you can navigate in a browser to <http://localhost:8888/>.
 
 <!-- [The following has the problem that most of them won't have a way to the their main user folder in the Finder. Thanks Apple. We can just have them start it from the command line, as long as they are there anyway.]
 
 To launch IPython notebook in MacOS, open the Finder and navigate to the *anaconda* folder under your main user folder and double-click on Launcher.app. (If your main user folder isn’t visible in the Finder, you can get there by typing Shift-Command-H in an open Finder window.) In Microsoft Windows you can start the Launcher from your regular Start menu. You can then start IPython notebook from the Launcher. -->
-
-#### Installing and starting IPython notebook on Ubuntu Linux
-
-**[Add instructions for installing and launching IPython notebook on Linux.]**
 
 #### Using IPython notebook
 

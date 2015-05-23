@@ -120,14 +120,36 @@ Once you have found your command line, as described above, you are ready to inst
 
 ### Installing the Python Levenshtein library
 
-CollateX relies on this library to do inexact matching of words. The installation procedure is the same for all platforms: type the following at the command line.
+CollateX relies on this library to do inexact matching of words.
+
+#### For Mac OS X and Linux
+
+Type the following at the command line.
 
     pip install python-levenshtein
     
 <em>**N.B. for Mac users:** You may get a popup window telling you that you require the command-line developer tools. If you get this window, choose 'Install'. When the installation is finished, run the command again.</em>
-    
-<!--
 
+Once this is done, you can check that everything worked with the following command:
+
+	python -c "import Levenshtein; print('This works.')"
+
+#### Alternative for Windows (May 2015, hopefully temporary)
+
+At present, Windows users who have no C++ compiler configured (that's probably most of you who are reading this) must download separately a binary version of the package. The package files [are available here](http://www.lfd.uci.edu/~gohlke/pythonlibs/#python-levenshtein). You should download (do not run!) one of the following two files: 
+
+* `python_Levenshtein‑0.12.0‑cp34‑none‑win32.whl` (if your system is a 32-bit one)
+* `python_Levenshtein‑0.12.0‑cp34‑none‑win_amd64.whl` (if your system is 64-bit)
+
+Make a note of where you have saved them (probably the Downloads folder.) Now return to your Powershell window and type the command:
+
+	pip install Downloads\python_Levenshtein‑WHATEVER_YOU_JUST_DOWNLOADED.whl
+	
+If necessary, replace `Downloads` with the name of the folder you saved the file into. Once this is done, you can check that everything worked with the following command:
+
+	python -c "import Levenshtein; print('This works.')"
+    
+<!-- 
 #### Installing CollateX on Ubuntu Linux
 
 The easiest way to install CollateX is with pip, a Python *package manager*. To test whether pip is available, type:
@@ -181,7 +203,25 @@ Graphviz is a program for creating graphic representations, including the *varia
 
 The easiest way to install Graphviz is to download the appropriate installer from [the Graphviz download page](http://www.graphviz.org/Download.php) (you will need to accept the license.) On Windows, use the .msi file if you can.
 
-Next, you will need to add Graphviz to the execution path.
+When the installer shows the following screen:
+
+<img src="graphviz_installation.png" width="400">
+
+copy the **full and exact** folder name down somewhere.
+
+When the installer is done, you will need to add Graphviz to the execution path. 
+
+1. From the Control Panel, choose System and Security -> System -> Advanced settings, and then click the 'Environment variables' button near the bottom of the window.
+2. Select the entry in the list that says PATH and choose 'Edit'.
+3. Scroll all the way to the end of whatever is already there, and add a `;` character, then the exact install location you copied, and then `\bin`.
+4. Close any open Powershell window you have. Open a new one, and run the command
+
+		where.exe dot
+		
+	Do not leave off the `.exe`! You should have an answer that looks like this:
+	
+		PS C:\Users\Tara L Andrews> where.exe dot
+		C:\Program Files (x86)\Graphviz2.38\bin\dot.exe
 
 #### Installing Graphviz on Mac OS X
 

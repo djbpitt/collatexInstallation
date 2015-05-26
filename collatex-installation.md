@@ -44,7 +44,7 @@ The Anaconda package installer on Linux is not a clickable installation program 
 	
 (where `Downloads` is replaced with the name of the folder in which you saved Anaconda, if it is different.)
 
-**[Helena reported that she was unable to install from ~/Downloads and had to run the installation from ~ instead.]**
+*Some users have reported errors when trying to install from the Download directory. Should that happen to you, try moving the file to your home directory and installing from there.*
 
 When asked, say 'yes' to everything. When the installation is finished, type
 
@@ -171,9 +171,6 @@ In addition to Graphviz itself, you also need to install Python bindings (suppor
 Note that the preceding line does not install Graphviz; what it installs is the Python bindings for Graphviz. You also need to install Graphviz itself, as described in section 4, above.
 
 ## Environments
-
-**[Add information about the file system needed to know where project files
-are located.]**
 
 ### IPython notebook
 

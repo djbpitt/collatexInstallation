@@ -4,18 +4,18 @@ Using CollateX
 David J. Birnbaum (<djbpitt@gmail.com>), <http://www.obdurodon.org>  
 Tara Andrews (<tla@mit.edu>), <http://byzantini.st/>
 
-Last revised: 2015-05-25
+Last revised: 2016-10-26
 
 ## Overview
 
-This tutorial explains how to install Python, CollateX, and IPython notebook for use in our CollateX workshop at DH2015 (Sydney). Workshop participants should install the software prior to the workshop.
+This tutorial was originally written to explain how to install Python, CollateX, and IPython notebook for use in our CollateX workshop at DH2015 (Sydney). It was most recently updated for [_Code and Collation: Training Textual Scholars_](http://armacad.info/workshop-code-and-collation-training-textual-scholars-2-4-november-2016-netherlands), 2-4 November 2016, Netherlands. Workshop participants should install the software prior to the workshop.
 
 ## The short form
 
 If you regularly use Python and other software, here are the instructions in a nutshell:
 
 * Ensure Python 3, preferably the [Anaconda](http://continuum.io/downloads.html) distribution
-* `pip install --pre collatex`
+* `pip install collatex`
 * `pip install python-levenshtein` (but see the [note below for Windows](#windows-levenshtein))
 * Install Graphviz (either through a package manager such as apt-get or MacPorts, 
   or go to <http://www.graphviz.org/Download.php> and accept the license)
@@ -26,7 +26,7 @@ If you are not sure what all that means, read on!
 
 ## Installation
 
-To run CollateX, you need first to install Python 3 and then the CollateX module, along with some other programs, packages, and modules upon which CollateX depends. Here’s how to do that in Mac OS X, Ubuntu Linux, and Windows. The process described below will probably take between thirty minutes and an hour, depending on how familiar you are with installing programs on your system. The good news is that you only have to do the installation once, and launching CollateX after that will take almost no time. This tutorial assumes that you are running Mac OS X 10.8 or later, Windows 7 or 8, or Ubuntu Linux 14.04 LTS or later. 
+To run CollateX, you need first to install Python 3 and then the CollateX module, along with some other programs, packages, and modules upon which CollateX depends. Here’s how to do that in Mac OS X, Ubuntu Linux, and Windows. The process described below will probably take between thirty minutes and an hour, depending on how familiar you are with installing programs on your system. The good news is that you only have to do the installation once, and launching CollateX after that will take almost no time. This tutorial assumes that you are running Mac OS X 10.8 or later; Windows 7, 8, or 10; or Ubuntu Linux 14.04 LTS or later. 
 
 In all of the steps below, if you are prompted to enter your password, you should do so.
 
@@ -34,13 +34,13 @@ In all of the steps below, if you are prompted to enter your password, you shoul
 
 Your system may already have some version of Python installed, but we recommend that you install and use the Anaconda Python distribution. CollateX will work with other distributions of Python 3, but the installation and configuration is more complicated, so for the workshop we are using Anaconda. Installing Anaconda according to the instructions on their site should not interfere with other existing Python versions on your system.
 
-For Mac OS, Linux, and Windows, the Python installation instructions are the same: download and install Anaconda Python from <http://continuum.io/downloads.html>. **Be sure to click on the link that says <q>I want Python 3.4</q> before you download**. If you are curious, there’s a useful Anaconda quick-start tutorial at <https://store.continuum.io/static/img/Anaconda-Quickstart.pdf>.
+For Mac OS, Linux, and Windows, the Python installation instructions are the same: download and install Anaconda Python from <http://continuum.io/downloads.html>. **Be sure to install version 3.5**. If you are curious, there’s a useful Anaconda quick-start tutorial at <https://store.continuum.io/static/img/Anaconda-Quickstart.pdf>.
 
 #### Extra instructions for Linux users
 
 The Anaconda package installer on Linux is not a clickable installation program as on Mac OS and Windows. You will need to choose to save the file, and then make a note of where the installer was saved (most likely your Downloads folder). You will then open a command line window (Ctrl-Alt-T on Ubuntu) to type the command
 
-	bash Downloads/Anaconda3-2.2.0-Linux-x86_64.sh
+	bash Downloads/Anaconda3-4.2.0-Linux-x86_64.sh
 	
 (where `Downloads` is replaced with the name of the folder in which you saved Anaconda, if it is different.)
 
@@ -82,7 +82,7 @@ _**Windows users:** Some of you may have used `cmd.exe` in the past, to work at 
 
 The easiest way to install CollateX from the command line is with `pip`, a Python *package manager*. `pip` comes bundled with Anaconda, so you don’t have to install it separately, and you can install CollateX and the most of the libraries on which it depends by typing:
 
-    pip install --pre collatex 
+    pip install collatex 
     
 ### 3. Installing the Python Levenshtein library
 
@@ -108,8 +108,8 @@ Windows users can try:
 
 but this will succeed only if you have a C++ compiler configured. If you get an error message, you can instead install a precompiled binary version of the package, which you can do with the following:
 
-* `pip install http://collatex.obdurodon.org/python_Levenshtein‑0.12.0‑cp34‑none‑win32.whl` (if your system is a 32-bit one)
-* `pip install http://collatex.obdurodon.org/python_Levenshtein‑0.12.0‑cp34‑none‑win_amd64.whl` (if your system is 64-bit)
+* `pip install http://collatex.obdurodon.org/python_Levenshtein‑0.12.0‑cp35‑none‑win32.whl` (if your system is a 32-bit one)
+* `pip install http://collatex.obdurodon.org/python_Levenshtein‑0.12.0‑cp35‑none‑win_amd64.whl` (if your system is 64-bit)
 
 These files are mirrored from <http://www.lfd.uci.edu/~gohlke/pythonlibs/#python-levenshtein>. 
 
@@ -172,34 +172,34 @@ Note that the preceding line does not install Graphviz; what it installs is the 
 
 ## Environments
 
-### IPython notebook
+###Jupyter notebook
 
 We will use the IPython notebook development environment in our workshop to write and test CollateX collations. IPython notebook is bundled with Anaconda Python and does not require any special installation. At the workshop we’ll describe how to use it to work with CollateX, but here are some preliminaries in case you want to test your installation.
 
-#### Starting IPython notebook
+#### Starting Jupyter notebook
 
-To launch IPython notebook, at your command line type:
+To launch Jupyter notebook, at your command line type:
 
-	ipython notebook
+	jupyter notebook
 	
-and wait for a window to open in your Web browser. You can ignore the command line after that; your interaction with IPython will happen entirely in the Web browser window.
+and wait for a window to open in your Web browser. You can ignore the command line after that; your interaction with Jupyter will happen entirely in the Web browser window.
 
 If, for whatever reason, nothing happens in your Web browser, then once you see a pair of lines in the command-line terminal like:
 
-	[I 23:14:13.260 NotebookApp] The IPython Notebook is running at: http://localhost:8888/
-	[I 23:14:13.260 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+    [I 19:29:27.359 NotebookApp] The Jupyter Notebook is running at: http://localhost:8888/
+    [I 19:29:27.359 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
 	
-you can navigate in a browser to `http://localhost:8888/`
+(the numbers may differ) you can navigate in a browser to `http://localhost:8888/`
 
-In rare cases some users may already be running another application that uses that address, in which case IPython notebook will refuse to start. You can tell IPython notebook to use a different address with:
+In rare cases some users may already be running another application that uses that address, in which case Jupyter notebook will refuse to start. You can tell Jupyter notebook to use a different address with:
 
-    ipython notebook --port 8889
+    jupyter notebook --port 8889
 
 Numbers between 8889 and 8899 are likely to be free.
 
-#### Using IPython notebook
+#### Using Jupyter notebook
 
-To work with IPython notebook, on the web page that opens when you launch the program drop down the button labeled <q>New</q> in the upper right and select <q>Python 3</q>. We’ll describe how to use IPython notebook in the workshop, but if you already know a bit of Python, you can type Python commands into an empty cell and click the Run button (right-pointing triangle in the menu bar) or type Shift-Enter. The results of running your program will appear immediately below your code. For example, try typing the following into a cell in IPython notebook:
+To work with Jupyter notebook, on the web page that opens when you launch the program drop down the button labeled <q>New</q> in the upper right and select <q>Python [conda root]</q> or <q>Python 3</q>. We’ll describe how to use Jupyter notebook in the workshop, but if you already know a bit of Python, you can type Python commands into an empty cell and click the Run button (right-pointing triangle in the menu bar) or type Shift-Enter. The results of running your program will appear immediately below your code. For example, try typing the following into a cell in Jupyter notebook:
 
     from collatex import *
     collation = Collation()

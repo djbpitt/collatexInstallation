@@ -174,7 +174,7 @@ Note that the preceding line does not install Graphviz; what it installs is the 
 
 ###Jupyter notebook
 
-We will use the IPython notebook development environment in our workshop to write and test CollateX collations. IPython notebook is bundled with Anaconda Python and does not require any special installation. At the workshop we’ll describe how to use it to work with CollateX, but here are some preliminaries in case you want to test your installation.
+We will use the Jupyter notebook development environment in our workshop to write and test CollateX collations. Jupyter notebook is bundled with Anaconda Python and does not require any special installation. At the workshop we’ll describe how to use it to work with CollateX, but here are some preliminaries in case you want to test your installation.
 
 #### Starting Jupyter notebook
 
@@ -212,11 +212,11 @@ When you click the Run button, the results appear below the cell, and a new empt
 
     collate(collation,output="svg")
 
-into the next cell and click Run again, and a graphic representation of the collation should appear below the cell. (The cells on an IPython notebook know about one another, so the graph is drawn using the information you typed into the first cell.)
+into the next cell and click Run again, and a graphic representation of the collation should appear below the cell. (The cells on an Jupyter notebook know about one another, so the graph is drawn using the information you typed into the first cell.)
 
 ### Command line
 
-We typically use IPython notebook for experimentation and the command line for finished Python programs, and we’ll explain how to use CollateX from the command line in the workshop. If you are already familiar with working on the command line, you can save your Python code in a file (give it the traditional Python filename extension `.py`) and run it from the directory in which you’ve saved it with:
+We typically use Jupyter notebook for experimentation and the command line for finished Python programs, and we’ll explain how to use CollateX from the command line in the workshop. If you are already familiar with working on the command line, you can save your Python code in a file (give it the traditional Python filename extension `.py`) and run it from the directory in which you’ve saved it with:
 
     python nameofscript.py
 
